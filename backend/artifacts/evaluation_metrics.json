@@ -1,0 +1,226 @@
+{
+  "model_name": "Random Forest PE Classifier",
+  "model_version": "v1.0.0",
+  "training_samples": 1200,
+  "test_samples": 300,
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "avg_latency_ms": 0.065
+  },
+  "confusion_matrix": {
+    "true_negative": 150,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_positive": 150
+  },
+  "feature_importances": [
+    {
+      "feature": "suspicious_imports_count",
+      "importance": 0.2943
+    },
+    {
+      "feature": "entropy_mean",
+      "importance": 0.1842
+    },
+    {
+      "feature": "entropy_max",
+      "importance": 0.1798
+    },
+    {
+      "feature": "num_imports",
+      "importance": 0.1158
+    },
+    {
+      "feature": "has_signature",
+      "importance": 0.0895
+    },
+    {
+      "feature": "compile_year",
+      "importance": 0.0363
+    },
+    {
+      "feature": "has_debug",
+      "importance": 0.0321
+    },
+    {
+      "feature": "section_count",
+      "importance": 0.0271
+    },
+    {
+      "feature": "virtual_size_kb",
+      "importance": 0.0165
+    },
+    {
+      "feature": "has_tls",
+      "importance": 0.0095
+    },
+    {
+      "feature": "file_size_kb",
+      "importance": 0.007
+    },
+    {
+      "feature": "num_exports",
+      "importance": 0.0065
+    },
+    {
+      "feature": "pe_characteristics",
+      "importance": 0.001
+    },
+    {
+      "feature": "subsystem",
+      "importance": 0.0004
+    }
+  ],
+  "roc_curve": [
+    {
+      "fpr": 0.0,
+      "tpr": 0.0
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.72
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.74
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.7467
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.7667
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.84
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.8533
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.86
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.8733
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.9267
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.9667
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.98
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 0.02,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 0.0333,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 0.0867,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 0.0933,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 0.16,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 0.18,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 1.0,
+      "tpr": 1.0
+    }
+  ],
+  "baseline_comparison": {
+    "model": "Logistic Regression (Baseline)",
+    "accuracy": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0
+  },
+  "policy_comparison": [
+    {
+      "policy_name": "Game-Theoretic Expected Utility (Proposed)",
+      "policy_key": "game_theoretic_eu",
+      "avg_expected_utility": 17.46,
+      "false_interruption_rate": 0.0,
+      "missed_attacks_count": 0,
+      "action_breakdown": {
+        "Block": 145,
+        "Contain": 4,
+        "Deep Inspection": 1,
+        "Monitor": 150
+      },
+      "description": "Adapts defense based on asymmetric error costs and strategic attacker belief distribution."
+    },
+    {
+      "policy_name": "Game-Theoretic Minimax",
+      "policy_key": "game_theoretic_minimax",
+      "avg_expected_utility": 17.43,
+      "false_interruption_rate": 0.0,
+      "missed_attacks_count": 0,
+      "action_breakdown": {
+        "Block": 148,
+        "Contain": 2,
+        "Deep Inspection": 0,
+        "Monitor": 150
+      },
+      "description": "Minimizes worst-case loss against aggressive evasion strategies."
+    },
+    {
+      "policy_name": "Fixed-Threshold Policy",
+      "policy_key": "fixed_threshold",
+      "avg_expected_utility": 17.42,
+      "false_interruption_rate": 0.0,
+      "missed_attacks_count": 0,
+      "action_breakdown": {
+        "Block": 148,
+        "Contain": 0,
+        "Deep Inspection": 2,
+        "Monitor": 150
+      },
+      "description": "Standard industry cutoff at static confidence intervals (0.45 / 0.75)."
+    },
+    {
+      "policy_name": "Static Rule-Based Policy",
+      "policy_key": "rule_based",
+      "avg_expected_utility": 9.41,
+      "false_interruption_rate": 0.0,
+      "missed_attacks_count": 0,
+      "action_breakdown": {
+        "Block": 92,
+        "Contain": 0,
+        "Deep Inspection": 97,
+        "Monitor": 111
+      },
+      "description": "Heuristic detection rules based on high entropy and suspicious API imports."
+    }
+  ],
+  "evaluation_timestamp": "2026-10-23T18:49:43.268005"
+}

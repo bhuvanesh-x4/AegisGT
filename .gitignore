@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# Artifacts & DB
+backend/data/*.db
+backend/data/*.db-journal
+
+# Mobile & Native Build Outputs
+frontend/dist/
+frontend/android/app/build/
+frontend/android/.gradle/
+frontend/ios/build/
+frontend/ios/DerivedData/
+*.apk
+*.ipa
+*.aab
+
+# Logs
+*.log
