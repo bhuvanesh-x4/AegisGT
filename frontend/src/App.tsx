@@ -187,6 +187,8 @@ export function App() {
           subtitle={meta.subtitle}
           onQuickAnalyze={() => setActiveTab('analysis')}
           onToggleMobileMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onNavigateTab={(tab) => setActiveTab(tab)}
+          onSelectSampleDetail={handleSelectSampleDetail}
         />
 
         {/* Page Container with Hardware-Accelerated Smooth Entrance */}
